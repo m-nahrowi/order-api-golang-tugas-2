@@ -46,6 +46,7 @@ func main() {
 	router.GET("/orders/:orderID", orderController.GetOrder)
 	router.PUT("/orders/:orderID", orderController.UpdateOrder)
 	router.DELETE("/orders/:orderID", orderController.DeleteOrder)
+	router.GET("/orders", orderController.GetAllOrder)
 
 	// Jalankan server
 	err = router.Run(":8080")
